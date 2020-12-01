@@ -21,7 +21,7 @@ module.exports = {
         }
         else {
             //deliver
-            const target = creep.pos.findClosestByRange(STRUCTURE_CONTROLLER);
+            const target = creep.pos.findClosestByRange(FIND_MY_STRUCTURES);
             console.log(creep.transfer(target, RESOURCE_ENERGY));
             if (creep.transfer(target, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
                 creep.moveTo(target);
