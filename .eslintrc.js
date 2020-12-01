@@ -4,6 +4,7 @@ module.exports = {
     es6: true,
     node: true
   },
+
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -21,12 +22,13 @@ module.exports = {
   },
   plugins: ["@typescript-eslint", "import"],
   settings: {
-    "import/parsers": {
+    "import/parsers ": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
       typescript: {}
-    }
+    },
+
   },
   rules: {
     "@typescript-eslint/array-type": "error",
@@ -74,7 +76,7 @@ module.exports = {
       }
     ],
     "no-throw-literal": "error",
-    "no-trailing-spaces": "off",
+    "no-trailing-spaces": "error",
     "no-undef-init": "error",
     "no-underscore-dangle": "warn",
     "no-var": "error",
@@ -84,5 +86,6 @@ module.exports = {
     radix: "error",
     "sort-imports": "warn",
     "spaced-comment": "error",
+
   }
 };
